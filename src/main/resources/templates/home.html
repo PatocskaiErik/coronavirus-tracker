@@ -1,1 +1,29 @@
-<h1>Coronavirus Tracker</h1>
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Coronavirus Tracker Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<p th:text="${testName}"></p>
+
+<table>
+    <tr>
+        <th>State</th>
+        <th>Country</th>
+        <th>Total cases</th>
+    </tr>
+    <tr th:each="locationStat : ${locationStats}">
+        <td th:text="${locationStat.state}">Onions</td>
+        <td th:text="${locationStat.country}">2.41</td>
+        <td th:text="${locationStat.latestTotalCases}">0</td>
+    </tr>
+</table>
+
+</body>
+
+</html>
